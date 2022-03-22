@@ -1,6 +1,6 @@
 FROM debian:bullseye-slim
 MAINTAINER Odoo S.A. <info@odoo.com>
-
+##
 SHELL ["/bin/bash", "-xo", "pipefail", "-c"]
 
 # Generate locale C.UTF-8 for postgres and general locale data
