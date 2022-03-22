@@ -1,0 +1,23 @@
+version: '2'
+services:
+  web:
+    container_name: odoo
+    build:
+      context: .
+      dockerfile: /Users/ahmedebaid/PycharmProjects/Odoo/15.0/Docker/odoo.Dockerfile
+    volumes:
+      - ./../custom:/mnt/extra-addons
+      - /Users/ahmedebaid/PycharmProjects/Odoo/15.0/Docker/odoo-config:/etc/odoo
+      - /Users/ahmedebaid/odoo-15/enterprise/addons:/mnt/enterprise-addons
+    ports:
+      - 9066:8069
+    depends_on:
+      - db
+    restart: always
+
+  db:
+    image: postgres:13
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_PASSWORD=odoo
+      - POSTGRES_USER=odoo
