@@ -6,7 +6,7 @@ services:
       context: .
       dockerfile: odoo.Dockerfile
     volumes:
-      - ./../custom:/mnt/extra-addons
+      - ./Users/ahmedebaid/PycharmProjects/Odoo/15.0/custom:/mnt/extra-addons
       - /Users/ahmedebaid/PycharmProjects/Odoo/15.0/Docker/odoo-config:/etc/odoo
       - /Users/ahmedebaid/odoo-15/enterprise/addons:/mnt/enterprise-addons
     ports:
