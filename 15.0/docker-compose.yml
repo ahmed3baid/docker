@@ -4,7 +4,7 @@ services:
     container_name: odoo
     build:
       context: .
-      dockerfile: /Users/ahmedebaid/PycharmProjects/Odoo/15.0/Docker/odoo.Dockerfile
+      dockerfile: odoo.Dockerfile
     volumes:
       - ./../custom:/mnt/extra-addons
       - /Users/ahmedebaid/PycharmProjects/Odoo/15.0/Docker/odoo-config:/etc/odoo
